@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #c1bff2;
+    transition: background-color 0.5s ease; /* Add transition to background-color */
+
+
+  }
+  h1 {
+    font-family: "Lexend";
+    font-size: 25vw !important;
+    color: white !important;
+
+  }
+  .text {
+    /* position: relative; */
+    text-align: center; /* Ensures the text is centered */
+    position: fixed;
+    transform: translateY(0); /* Initial position */
+    text-align: center;
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Add transition to transform and opacity */  }
+
+    .text.show {
+        transform: translateY(-30px); /* Move text up by 10px */
+        opacity: 1; /* Show the text */
+      }
+   
+
+
+
+
+
+
+
+
+
+
+
+/* Cane Image and Wrapper Image */
+.caneimage {
+    max-width: 265px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    mask-image: url(https://www.yudiz.com/codepen/fruity/cane.svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center center;
+    mask-position: center center;
+    -webkit-mask-size: 100% auto;
+    mask-size: 100% auto;
+    overflow: hidden;
+    box-shadow: #c1bff2;
+  }
+  .caneimage img {
+    width: 100%;
+  }
+  .cane-labels {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300% !important;
+    mix-blend-mode: multiply;
+    transition: all ease-in-out 3s;
+  }
+
+/* Animation for moving the labels from right to left */
+@keyframes moveLabels {
+    0%, 16.66% {
+        transform: translateX(0); /* Start position for label 1 */
+      }
+      33.33%, 49.99% {
+        transform: translateX(-34%); /* End position for label 1 */
+      }
+      50%, 66.66% {
+        transform: translateX(-34%); /* Start position for label 2 */
+      }
+      83.33%, 99.99% {
+        transform: translateX(-66%); /* End position for label 2 */
+      }
+  }
+  
+  /* Apply animation to the cane-labels based on position */
+  .cane-labels.position-0 {
+    animation: moveLabels 6s linear infinite;
+
+  }
+  .cane-labels.position-1 {
+    animation: moveLabels 6s linear 6s infinite;
+  }
+  .cane-labels.position-2 {
+    animation: moveLabels 6s linear 6s infinite;
+
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
